@@ -1,0 +1,50 @@
+
+<!-- Start stagger anime.js Grid animation -->
+<script>
+  anime({
+  targets: '.stagger-grid .small-square',
+  opacity: 1, 
+  scale: [
+	  {value: .40, duration: 1500},
+    {value: .1, easing: 'easeOutSine', duration: 1500},
+    {value: .8, easing: 'easeOutSine', duration: 1500, rotation: 78},
+    {value: .40, easing: 'easeInOutQuad', duration: 1200},
+    {value: 1, easing: 'easeInOutQuad', duration: 400}
+  ],
+  delay: anime.stagger(50, {grid: [10, 4], from: 'first'}),
+  loop: true
+});
+</script>  
+
+<script>
+  anime({
+  targets: '.stagger-grid2 .small-square',
+  opacity: 1, 
+  scale: [
+	  {value: .20, duration: 900},
+    {value: .8, easing: 'easeOutSine', duration: 1500},
+    {value: .3, easing: 'easeOutSine', duration: 1500},
+    {value: .70, easing: 'easeInOutQuad', duration: 500},
+    {value: 1, easing: 'easeInOutQuad', duration: 400}
+  ],
+  delay: anime.stagger(50, {grid: [8, 7], from: 'first'}),
+  loop: true
+});
+</script>  
+
+<script>
+  anime({
+  targets: '.stagger-grid3 .small-square',
+  opacity: 1, 
+  scale: [
+	{value: .35, duration: 500},
+    {value: .7, easing: 'easeOutSine', duration: 900},
+    {value: .34, easing: 'easeOutSine', duration: 1200},
+    {value: .75, easing: 'easeInOutQuad', duration: 800},
+    {value: 1, easing: 'easeInOutQuad', duration: 900}
+  ],
+  delay: anime.stagger(40, {grid: [5, 5], from: 'first'}),
+  loop: true
+});
+</script>  
+<!-- End stagger anime.js Grid animation -->
