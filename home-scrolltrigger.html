@@ -50,6 +50,36 @@ $(".scroll-link").each(function (index) {
 </script>
 <!-- End About Scroller Arrow animation -->
 
+
+<!-- Start Section Label -->
+<script>
+$(".section-label").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  });
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 280,
+    duration: 2,
+    x : -200,
+    ease: "power1.inOut"
+    });
+  });
+</script>
+<!-- End About Scroller Arrow animation -->
+
+
+
+
 <!-- Start Split text  -->
 <script>
 // split-text
