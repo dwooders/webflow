@@ -1,7 +1,7 @@
 <!-- Start Hompeage Circles Label -->
 <script>
 $(".circle-link").each(function (index) {
-  let triggerElement = $(this);
+  let triggerElement = $(".is--hero");
   let targetElement = $(this);
 
   let tl = gsap.timeline({
@@ -17,7 +17,6 @@ $(".circle-link").each(function (index) {
     opacity: 0,
     delay: 100,
     duration: 1000,
-    x : -350,
     ease: "easeOutQuad"
     });
   });
