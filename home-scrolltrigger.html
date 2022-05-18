@@ -79,6 +79,33 @@ $(".section-label").each(function (index) {
 
 
 
+<!-- Start Submit Button Contact Label -->
+<script>
+$(".submit-button-contact").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  }); 
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 100,
+    duration: 10000,
+    ease: "easeOutQuad"
+    });
+  });
+</script>
+<!-- End Submit Button Contact Label -->
+
+
+
 <!-- Start Split text  -->
 <script>
 // split-text
