@@ -1,7 +1,8 @@
-<!-- Start Hompeage Circles Label -->
+
+<!-- Start Section Label -->
 <script>
-$(".circle1").each(function (index) {
-  let triggerElement = $(".is--hero");
+$(".circle-link").each(function (index) {
+  let triggerElement = $(this);
   let targetElement = $(this);
 
   let tl = gsap.timeline({
@@ -13,17 +14,13 @@ $(".circle1").each(function (index) {
       scrub: 1
     }
   }); 
-  tl.from(targetElement, {
-    opacity: 0,
+  tl.to(targetElement, {
+    opacity: 40,
     delay: 100,
-    duration: 1000,
-    y : 30,
-    ease: "power1.inOut"
+    duration: 15000,
+    x : -350,
+    ease: "easeOutQuad"
     });
   });
 </script>
-<!-- End Hompeage Circles Label -->
-
-
-
-
+<!-- End Section Label -->
