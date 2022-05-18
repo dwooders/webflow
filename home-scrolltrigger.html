@@ -1,54 +1,6 @@
 
 <!-- Start scrolltrigger animations -->
-<!-- Start Client Line animation -->
-<script>
-// Animate From
-$(".client-line").each(function (index) {
-  let triggerElement = $(this);
-  let targetElement = $(this);
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: triggerElement,
-      // trigger element - viewport
-      start: "top bottom",
-      end: "top center",
-      scrub: 1
-    }
-  });
-  tl.from(targetElement, {
-    width: "0%",
-    duration: 2
-    });
-  });
-</script>
-<!-- End Client Line animation -->
-
-<!-- Start About Scroller Arrow animation -->
-<script>
-$(".scroll-link").each(function (index) {
-  let triggerElement = $(this);
-  let targetElement = $(this);
-
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: triggerElement,
-      // trigger element - viewport
-      start: "top bottom",
-      end: "top 90%",
-      scrub: 1
-    }
-  });
-  tl.from(targetElement, {
-    opacity: 0,
-    delay: 280,
-    duration: 2,
-    y : 30,
-    ease: "power1.inOut"
-    });
-  });
-</script>
-<!-- End About Scroller Arrow animation -->
 
 <!-- Start Split text  -->
 <script>
@@ -76,47 +28,6 @@ $(".split-text").each(function (index) {
     });
   });
 
-$(".about-header").each(function (index) {
-    let myTextAbout = $(this);
-    let mySplitTextAbout;
-    function createSplitsAbout() {
-      mySplitTextAbout = new SplitText(myTextAbout, {
-        type: "chars,words,lines",
-        charsClass: "split-chars",
-        wordsClass: "split-words",
-        linesClass: "split-lines"
-      });
-    }
-    createSplitsAbout();
-    $(window).resize(function () {
-        if (window.outerWidth !== windowWidth) {
-          mySplitTextAbout.revert();
-              location.reload();
-      }
-      windowWidth = window.outerWidth;
-    });
-  });
-  
-$(".about-header-stroke").each(function (index) {
-    let myTextAboutStroke = $(this);
-    let mySplitTextAboutStroke;
-    function createSplitsAboutStroke() {
-      mySplitTextAboutStroke = new SplitText(myTextAboutStroke, {
-        type: "chars,words,lines",
-        charsClass: "split-chars",
-        wordsClass: "split-words",
-        linesClass: "split-lines"
-      });
-    }
-    createSplitsAboutStroke();
-    $(window).resize(function () {
-        if (window.outerWidth !== windowWidth) {
-          mySplitTextAboutStroke.revert();
-              location.reload();
-      }
-      windowWidth = window.outerWidth;
-    });
-  });
 
 $(".split-client").each(function (index) {
   let myClient = $(this);
@@ -139,26 +50,6 @@ $(".split-client").each(function (index) {
     });
   });
 
-$(".contact-header").each(function (index) {
-    let myTextContact = $(this);
-    let mySplitTextContact;
-    function createSplitsContact() {
-      mySplitTextContact = new SplitText(myTextContact, {
-        type: "chars,words,lines",
-        charsClass: "split-chars",
-        wordsClass: "split-words",
-        linesClass: "split-lines"
-      });
-    }
-    createSplitsContact();
-    $(window).resize(function () {
-        if (window.outerWidth !== windowWidth) {
-          mySplitTextContact.revert();
-              location.reload();
-      }
-      windowWidth = window.outerWidth;
-    });
-  });
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -223,135 +114,9 @@ function createTextAnimations() {
   
   }
 
-function createAboutHeaderAnimation() {
-    // Line Animation
-    $(".about-line-animation").each(function (index) {
-      let triggerElement = $(this);
-      let myTextAbout = $(this).find(".about-header");
-      let targetElement = $(this).find(".split-lines");
-  
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: triggerElement,
-          // trigger element - viewport
-          start: "top bottom",
-          end: "bottom top",
-          toggleActions: "restart none none none"
-        }
-      });
-      tl.from(targetElement, {
-              delay: .1,
-              duration: 0.55,
-        y: "150%",
-        rotationX: -90,
-        opacity: 0,
-        ease: "power1.inOut",
-              stagger: {
-          amount: 0.4,
-          from: "0"
-        }
-      });
-    });
-  }
-  
-function createAboutHeaderStrokeAnimation() {
-    // Line Animation
-    $(".about-line-stroke-animation").each(function (index) {
-      let triggerElement = $(this);
-      let myTextAboutStroke = $(this).find(".about-header-stroke");
-      let targetElement = $(this).find(".split-lines");
-  
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: triggerElement,
-          // trigger element - viewport
-          start: "top bottom",
-          end: "bottom top",
-          toggleActions: "restart none none none"
-        }
-      });
-      tl.from(targetElement, {
-        delay: .1,
-        duration: 0.55,
-        y: "150%",
-        rotationX: -90,
-        opacity: 0,
-        ease: "power1.inOut",
-              stagger: {
-          amount: 0.4,
-          from: "0"
-        }
-      });
-    });
-  }
-
-function createClientNameAnimation() {
-  // Letter Animation
-  $(".letter-animation").each(function (index) {
-    let triggerElement = $(this);
-    let myClient = $(this).find(".split-client");
-    let targetElement = $(this).find(".split-chars");
-
-    let tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: triggerElement,
-        // trigger element - viewport
-        start: "top bottom",
-        end: "bottom top",
-        toggleActions: "restart none none none"
-      }
-    });
-    tl.from(targetElement, {
-      delay: .25,
-      duration: 0.5,
-      y: "50%",
-      opacity: 0,
-      rotationX: -90,
-      ease: "power1.inOut",
-      stagger: {
-        amount: 0.3,
-        from: "0"
-      }
-    });
-  });
-  }
-  
-function createContactHeaderAnimation() {
-    // Line Animation
-    $(".contact-line-animation").each(function (index) {
-      let triggerElement = $(this);
-      let myTextAbout = $(this).find(".contact-header");
-      let targetElement = $(this).find(".split-lines");
-  
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: triggerElement,
-          // trigger element - viewport
-          start: "top bottom",
-          end: "bottom top",
-          toggleActions: "restart none none none"
-        }
-      });
-      tl.from(targetElement, {
-              delay: .2,
-              duration: 0.75,
-        y: "150%",
-        rotationX: -90,
-        opacity: 0,
-        ease: "power1.inOut",
-              stagger: {
-          amount: 0.4,
-          from: "0"
-        }
-      });
-    });
-  }
 
 createTextAnimations();
-createAboutHeaderAnimation();
-createAboutHeaderStrokeAnimation();
-createClientNameAnimation();
-createContactHeaderAnimation();
+
 
 </script>
 <!-- End Split text  -->
