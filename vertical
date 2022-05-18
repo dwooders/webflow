@@ -1,0 +1,27 @@
+<!-- Start scrolltrigger vertical parallax -->
+<script>
+gsap.to(".line1-div", {
+ scrollTrigger : {
+ scrub : 1
+ }, 
+ y : -350
+});
+</script>
+
+<script>
+gsap.to(".line2-div", {
+ scrollTrigger : {
+ scrub : 1
+ }, 
+ y : -450
+});
+</script>
+
+<script>
+gsap.to(".line3-div", {
+ scrollTrigger : {
+ scrub : 1
+ }, 
+ y : -550
+});
+</script>
