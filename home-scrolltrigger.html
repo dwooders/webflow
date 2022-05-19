@@ -80,26 +80,30 @@ $(".section-label").each(function (index) {
 
 
 <!-- Start contact button -->
-<script>
 
-$(".submit-button-contact").each(function (index) {
+<!-- Start Section Label -->
+<script>
+$(".contact-button").each(function (index) {
   let triggerElement = $(this);
-  let targetElement = $(".target-class");
+  let targetElement = $(this);
 
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: triggerElement,
       // trigger element - viewport
-      start: "top center",
-      end: "bottom top",
+      start: "top bottom",
+      end: "top 90%",
       scrub: 1
     }
-  });
+  }); 
   tl.from(targetElement, {
-    y : 250,
-    duration: 1
+    opacity: 0,
+    delay: 100,
+    duration: 1,
+    x : -350,
+    });
   });
-});
+</script>
 <!-- End contact button -->
 
 
