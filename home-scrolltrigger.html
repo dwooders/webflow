@@ -79,7 +79,7 @@ $(".section-label").each(function (index) {
 
 <!-- Start Contact button -->
 <script>
-$(".about-text").each(function (index) {
+$(".contact").each(function (index) {
   let triggerElement = $(this);
   let targetElement = $(this);
 
@@ -94,10 +94,10 @@ $(".about-text").each(function (index) {
   }); 
   tl.from(targetElement, {
     opacity: 0,
-    delay: 7500,
+    delay: 15000,
     y : 40,
     duration: 4000,
-    ease: "easeOutQuad"
+    ease: "power1.inOut"
     });
   });
 </script>
