@@ -79,6 +79,35 @@ $(".section-label").each(function (index) {
 
 
 
+<!-- Start contact button -->
+<script>
+$(".contact-button").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  }); 
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 100,
+    duration: 15000,
+    y : 150
+    });
+  });
+</script>
+<!-- End contact button -->
+
+
+
+
+
 
 
 <!-- Start Back to top -->
