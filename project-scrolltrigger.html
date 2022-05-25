@@ -1,6 +1,25 @@
 <!-- Start Stagger Animations -->
 
-
+<!-- Start Fade In Hero Image div -->
+<script>
+var fadeInHeroImageDiv = anime.timeline({
+  loop: false,
+  autoplay: false,
+});
+ 
+fadeInHeroImageDiv 
+  .add({
+    targets: '.hero-image-div',
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutQuad",
+    duration: 550,
+    delay: 10
+  });
+  
+fadeInHeroImageDiv.play();
+</script>
+<!-- End Fade In Hero Image div -->
 
 
 <!-- Start Fade In Summary1 -->
