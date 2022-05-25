@@ -9,12 +9,12 @@ var fadeInHero = anime.timeline({
 fadeInHero 
   .add({
     targets: '.hero-image',
-    translateY: [70,0],
+    translateY: [-70,0],
     translateZ: 0,
     opacity: [0,1],
     easing: "easeOutExpo",
     duration: 1100,
-    delay: 650
+    delay: 0
   });
   
 fadeInHero.play();
@@ -266,4 +266,3 @@ createAboutHeaderAnimation();
 </script>
 <!-- End Split text  -->
 <!-- End scrolltrigger animations -->
- 
