@@ -23,6 +23,31 @@ fadeInHero.play();
 <!-- End Fade In Hero -->
 
 
+<!-- Start Fade In Line 1 -->
+<script>
+    var fadeInLine1 = anime.timeline({
+      loop: false,
+      autoplay: false,
+    });
+    
+    fadeInLine1 
+      .add({
+        targets: '.line1',
+        translateY: [-50,0],
+        translateZ: 0,
+        opacity: [0,1],
+        easing: "easeOutExpo",
+        duration: 1100,
+        delay: 0
+      });
+      
+    fadeInLine1.play();
+    </script>
+    <!-- End Fade In Line 1 -->
+
+
+
+
 <!-- Start Fade In Summary1 -->
 <script>
 var fadeInSummary1 = anime.timeline({
