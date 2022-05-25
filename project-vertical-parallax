@@ -5,7 +5,7 @@
      scrollTrigger : {
      scrub : .45
      }, 
-     y : 700
+     y : 550
     });
 </script>
 
