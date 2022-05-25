@@ -5,7 +5,7 @@
      scrollTrigger : {
      scrub : .45
      }, 
-     y : -200
+     y : 200
     });
 </script>
 
@@ -14,7 +14,7 @@
      scrollTrigger : {
      scrub : 1
      }, 
-     y : -350
+     y : 350
     });
 </script>
     
@@ -23,7 +23,7 @@
      scrollTrigger : {
      scrub : 1
      }, 
-     y : -450
+     y : 450
     });
 </script>
     
@@ -32,7 +32,7 @@
          scrollTrigger : {
          scrub : 1
          }, 
-         y : -350
+         y : 350
         });
 </script>
 
@@ -41,7 +41,7 @@
      scrollTrigger : {
      scrub : 1
      }, 
-     y : -350
+     y : 350
     });
     </script>
     
@@ -50,7 +50,7 @@
      scrollTrigger : {
      scrub : 1
      }, 
-     y : -450
+     y : 450
     });
 </script>
         
@@ -59,7 +59,7 @@
      scrollTrigger : {
      scrub : 1.35
      }, 
-     y : -350
+     y : 350
     });
 </script>
     
@@ -68,12 +68,9 @@
      scrollTrigger : {
      scrub : 1.35
      }, 
-     y : -350
+     y : 350
     });
 </script>
     
-    
-    
-    
-    <!-- End scrolltrigger parallax -->
+<!-- End scrolltrigger parallax -->
     
