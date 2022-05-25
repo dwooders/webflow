@@ -3,9 +3,9 @@
 <script>
     gsap.to(".hero-image", {
      scrollTrigger : {
-     scrub : 1.35
+     scrub : .8
      }, 
-     y : -100
+     y : -200
     });
 </script>
 
