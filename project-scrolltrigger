@@ -1,0 +1,363 @@
+<!-- Start Stagger Animations -->
+<!-- Start Fade In Hero -->
+<script>
+var fadeInHero = anime.timeline({
+  loop: false,
+  autoplay: false,
+});
+
+fadeInHero 
+  .add({
+    targets: '.project-hero-imager',
+    translateY: [70,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1100,
+    delay: 650
+  });
+  
+fadeInHero.play();
+</script>
+<!-- End Fade In Hero -->
+
+
+<!-- Start Fade In Summary1 -->
+<script>
+var fadeInSummary1 = anime.timeline({
+  loop: false,
+  autoplay: false,
+});
+
+fadeInSummary1 
+  .add({
+    targets: '.summary1-div',
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutQuad",
+    duration: 750,
+    delay: 780
+  });
+  
+fadeInSummary1.play();
+</script>
+<!-- End Fade In Summary1 -->
+
+<!-- Start Fade In Main Image -->
+<script>
+var fadeInMainImage = anime.timeline({
+  loop: false,
+  autoplay: false,
+});
+
+fadeInMainImage 
+  .add({
+    targets: '.main-image',
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutQuad",
+    duration: 750,
+    delay: 900
+  });
+  
+fadeInMainImage.play();
+</script>
+<!-- End Fade In Main Image -->
+
+<!-- Start Fade In Project Content -->
+<script>
+var fadeInProjectContent = anime.timeline({
+  loop: false,
+  autoplay: false,
+});
+
+fadeInProjectContent 
+  .add({
+    targets: '.project-content',
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutQuad",
+    duration: 750,
+    delay: 1150
+  });
+  
+fadeInProjectContent.play();
+</script>
+<!-- End Fade In Project Content -->
+
+
+
+
+<!-- Start scrolltrigger parallax -->
+<script>
+gsap.to(".line1", {
+ scrollTrigger : {
+ scrub : 1
+ }, 
+ y : -350
+});
+</script>
+
+<script>
+gsap.to(".line2", {
+ scrollTrigger : {
+ scrub : 1
+ }, 
+ y : -450
+});
+</script>
+
+<script>
+gsap.to(".line3", {
+ scrollTrigger : {
+ scrub : 1
+ }, 
+ y : -350
+});
+</script>
+
+<script>
+gsap.to(".art1-div", {
+ scrollTrigger : {
+ scrub : 1
+ }, 
+ y : -350
+});
+</script>
+
+<script>
+gsap.to(".art2-div", {
+ scrollTrigger : {
+ scrub : 1
+ }, 
+ y : -450
+});
+</script>
+
+
+
+<script>
+gsap.to(".scroll-down-link", {
+ scrollTrigger : {
+ scrub : 1.35
+ }, 
+ y : -450
+});
+</script>
+
+<script>
+gsap.to(".hero-image", {
+ scrollTrigger : {
+ scrub : 1.35
+ }, 
+ y : -450
+});
+</script>
+
+<script>
+gsap.to(".main-image", {
+ scrollTrigger : {
+ scrub : 1.35
+ }, 
+ y : -350
+});
+</script>
+
+<script>
+gsap.to(".project-content", {
+ scrollTrigger : {
+ scrub : 1.35
+ }, 
+ y : -350
+});
+</script>
+
+<script>
+gsap.to(".summary1-div", {
+ scrollTrigger : {
+ scrub : 1
+ }, 
+ y : -350
+});
+</script>
+
+
+<!-- End scrolltrigger parallax -->
+
+<!-- Start scrolltrigger animations -->
+<!-- Start Client Line animation -->
+<script>
+// Animate From
+$(".client-line").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top center",
+      scrub: 1
+    }
+  });
+  tl.from(targetElement, {
+    width: "0%",
+    duration: 2
+    });
+  });
+</script>
+<!-- End Client Line animation -->
+
+<!-- Start About Scroller Arrow animation -->
+<script>
+// Animate From
+$(".scroller-link-div").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  });
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 5,
+    duration: 2
+    });
+  });
+</script>
+<!-- End About Scroller Arrow animation -->
+
+<!-- Start Split text  -->
+<script>
+// split-text
+let windowWidth = window.outerWidth;
+
+$(".split-text").each(function (index) {
+  let myText = $(this);
+  let mySplitText;
+  function createSplits() {
+    mySplitText = new SplitText(myText, {
+      type: "chars,words,lines",
+      charsClass: "split-chars",
+      wordsClass: "split-words",
+      linesClass: "split-lines"
+    });
+  }
+  createSplits();
+  $(window).resize(function () {
+  	if (window.outerWidth !== windowWidth) {
+    	mySplitText.revert();
+			location.reload();
+    }
+    windowWidth = window.outerWidth;
+    });
+  });
+
+gsap.registerPlugin(ScrollTrigger);
+
+function createTextAnimations() {
+  // Line Animation
+  $(".line-animation").each(function (index) {
+    let triggerElement = $(this);
+    let myText = $(this).find(".split-text");
+    let targetElement = $(this).find(".split-lines");
+//gets current delay
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        // trigger element - viewport
+        start: "top bottom",
+        end: "bottom top",
+        toggleActions: "restart none none none"
+      }
+    });
+    tl.from(targetElement, {
+			delay: 0,
+			duration: 0.75,
+      y: "150%",
+      rotationX: -90,
+      opacity: 0,
+      ease: "power1.inOut",
+			stagger: {
+        amount: 0.4,
+        from: "0"
+      }
+    });
+  });
+  
+  // Word Animation
+  $(".word-animation").each(function (index) {
+    let triggerElement = $(this);
+    let myText = $(this).find(".split-text");
+    let targetElement = $(this).find(".split-words");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        // trigger element - viewport
+        start: "top bottom",
+        end: "bottom top",
+        toggleActions: "restart none none none"
+      }
+    });
+    tl.from(targetElement, {
+      duration: 0.3,
+      y: "80%",
+      rotationX: -90,
+      opacity: 0,
+      ease: "power1.inOut",
+      stagger: {
+        amount: 0.9,
+        from: "0"
+      }
+    });
+  });
+  
+  }
+
+function createAboutHeaderAnimation() {
+    // Line Animation
+    $(".about-line-animation").each(function (index) {
+      let triggerElement = $(this);
+      let myTextAbout = $(this).find(".about-header");
+      let targetElement = $(this).find(".split-lines");
+  
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: triggerElement,
+          // trigger element - viewport
+          start: "top bottom",
+          end: "bottom top",
+          toggleActions: "restart none none none"
+        }
+      });
+      tl.from(targetElement, {
+              delay: .1,
+              duration: 0.55,
+        y: "150%",
+        rotationX: -90,
+        opacity: 0,
+        ease: "power1.inOut",
+              stagger: {
+          amount: 0.4,
+          from: "0"
+        }
+      });
+    });
+  }
+  
+    
+createTextAnimations();
+createAboutHeaderAnimation();
+
+</script>
+<!-- End Split text  -->
+<!-- End scrolltrigger animations -->
