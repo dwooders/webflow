@@ -1,25 +1,26 @@
 <!-- Start Stagger Animations -->
 
-<!-- Start Fade In Hero Image div -->
+<!-- Start Fade In Hero -->
 <script>
-var fadeInHeroImageDiv = anime.timeline({
+var fadeInHero = anime.timeline({
   loop: false,
   autoplay: false,
 });
- 
-fadeInHeroImageDiv 
+
+fadeInHero 
   .add({
-    targets: '.hero-image-div',
+    targets: '.hero-image',
+    translateY: [-50,0],
     translateZ: 0,
     opacity: [0,1],
-    easing: "easeOutQuad",
-    duration: 550,
-    delay: 10
+    easing: "easeOutExpo",
+    duration: 1100,
+    delay: 0
   });
   
-fadeInHeroImageDiv.play();
+fadeInHero.play();
 </script>
-<!-- End Fade In Hero Image div -->
+<!-- End Fade In Hero -->
 
 
 <!-- Start Fade In Summary1 -->
@@ -28,7 +29,7 @@ var fadeInSummary1 = anime.timeline({
   loop: false,
   autoplay: false,
 });
-  
+ 
 fadeInSummary1 
   .add({
     targets: '.summary1-div',
@@ -36,7 +37,7 @@ fadeInSummary1
     opacity: [0,1],
     easing: "easeOutQuad",
     duration: 550,
-    delay: 1275
+    delay: 1350
   });
   
 fadeInSummary1.play();
@@ -78,7 +79,7 @@ fadeInProjectContent
     opacity: [0,1],
     easing: "easeOutQuad",
     duration: 750,
-    delay: 1275
+    delay: 1150
   });
   
 fadeInProjectContent.play();
@@ -86,10 +87,7 @@ fadeInProjectContent.play();
 <!-- End Fade In Project Content -->
 
 
-
-
-
-<!-- Start scrolltrigger animations -->
+<!-- Start Scrolltrigger Line animations -->
 <!-- Start Client Line animation -->
 <script>
 // Animate From
@@ -114,30 +112,7 @@ $(".client-line").each(function (index) {
 </script>
 <!-- End Client Line animation -->
 
-<!-- Start About Scroller Arrow animation -->
-<script>
-// Animate From
-$(".scroller-link-div").each(function (index) {
-  let triggerElement = $(this);
-  let targetElement = $(this);
 
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: triggerElement,
-      // trigger element - viewport
-      start: "top bottom",
-      end: "top 90%",
-      scrub: 1
-    }
-  });
-  tl.from(targetElement, {
-    opacity: 0,
-    delay: 5,
-    duration: 2
-    });
-  });
-</script>
-<!-- End About Scroller Arrow animation -->
 
 <!-- Start Split text  -->
 <script>
