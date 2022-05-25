@@ -28,7 +28,7 @@ var fadeInSummary1 = anime.timeline({
   loop: false,
   autoplay: false,
 });
-
+ 
 fadeInSummary1 
   .add({
     targets: '.summary1-div',
