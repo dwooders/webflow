@@ -32,7 +32,7 @@
          scrollTrigger : {
          scrub : 1
          }, 
-         y : 1
+         y : 220
         });
 </script>
 
