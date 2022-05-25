@@ -14,7 +14,7 @@
      scrollTrigger : {
      scrub : 1
      }, 
-     y : 1
+     y : 200
     });
 </script>
     
@@ -23,7 +23,7 @@
      scrollTrigger : {
      scrub : 1
      }, 
-     y : 1
+     y : 210
     });
 </script>
     
