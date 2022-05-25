@@ -5,7 +5,7 @@
      scrollTrigger : {
      scrub : .45
      }, 
-     y : 200
+     y : 350
     });
 </script>
 
@@ -26,6 +26,51 @@
      y : 1
     });
 </script>
- 
+    
+<script>
+        gsap.to(".summary1-div", {
+         scrollTrigger : {
+         scrub : 1
+         }, 
+         y : 1
+        });
+</script>
+
+<script>
+    gsap.to(".art1-div", {
+     scrollTrigger : {
+     scrub : 1
+     }, 
+     y : 1
+    });
+    </script>
+    
+    <script>
+    gsap.to(".art2-div", {
+     scrollTrigger : {
+     scrub : 1
+     }, 
+     y : 1
+    });
+</script>
+        
+<script>
+    gsap.to(".main-image", {
+     scrollTrigger : {
+     scrub : 1.35
+     }, 
+     y : 1
+    });
+</script>
+    
+<script>
+    gsap.to(".project-content", {
+     scrollTrigger : {
+     scrub : 1.35
+     }, 
+     y : 1
+    });
+</script>
+    
 <!-- End scrolltrigger parallax -->
     
