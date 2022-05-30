@@ -1,7 +1,30 @@
 
 <!-- Start scrolltrigger animations -->
 
-
+<!-- Start Client Line animation -->
+<script>
+    // Animate From
+    $(".client-line").each(function (index) {
+      let triggerElement = $(this);
+      let targetElement = $(this);
+    
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: triggerElement,
+          // trigger element - viewport
+          start: "top bottom",
+          end: "top 90%",
+          scrub: 1
+        }
+      });
+      tl.from(targetElement, {
+        width: "0%",
+        duration: 2
+        });
+      });
+    </script>
+    <!-- End Client Line animation -->
+ 
 
 <!-- Start About Scroller Arrow animation -->
 <script>
