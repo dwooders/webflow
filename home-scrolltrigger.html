@@ -1,4 +1,161 @@
 
+<!-- Start scrolltrigger animations -->
+
+<!-- Start Client Line animation -->
+<script>
+  // Animate From
+  $(".client-line").each(function (index) {
+    let triggerElement = $(this);
+    let targetElement = $(this);
+  
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        // trigger element - viewport
+        start: "top bottom",
+        end: "top 90%",
+        scrub: 1
+      }
+    });
+    tl.from(targetElement, {
+      width: "0%",
+      duration: 2
+      });
+    });
+  </script>
+  <!-- End Client Line animation -->
+
+
+<!-- Start About Scroller Arrow animation -->
+<script>
+$(".scroll-link").each(function (index) {
+let triggerElement = $(this);
+let targetElement = $(this);
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: triggerElement,
+    // trigger element - viewport
+    start: "top bottom",
+    end: "top 90%",
+    scrub: 1
+  }
+});
+tl.from(targetElement, {
+  opacity: 0,
+  delay: 280,
+  duration: 2,
+  y : 30,
+  ease: "power1.inOut"
+  });
+});
+</script>
+<!-- End About Scroller Arrow animation -->
+
+
+<!-- Start Section Label -->
+<script>
+$(".section-label").each(function (index) {
+let triggerElement = $(this);
+let targetElement = $(this);
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: triggerElement,
+    // trigger element - viewport
+    start: "top bottom",
+    end: "top 90%",
+    scrub: 1
+  }
+}); 
+tl.from(targetElement, {
+  opacity: 0,
+  delay: 100,
+  duration: 15000,
+  x : -350,
+  ease: "easeOutQuad"
+  });
+});
+</script>
+<!-- End Section Label -->
+
+
+
+<!-- Start circle-button -->
+<script>
+  $(".circle-button").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+  
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  }); 
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 7500,
+    duration: 400
+    });
+  });
+  </script>
+  <!-- End circle-button -->
+
+
+<!-- Start Contact -->
+<script>
+$(".submit-button-contact").each(function (index) {
+let triggerElement = $(this);
+let targetElement = $(this);
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: triggerElement,
+    // trigger element - viewport
+    start: "top bottom",
+    end: "top 90%",
+    scrub: 1
+  }
+}); 
+tl.from(targetElement, {
+  opacity: 0,
+  delay: 20000,
+  duration: 4000
+  });
+});
+</script>
+<!-- End Contact -->
+
+
+<!-- Start Back to top -->
+<script>
+$(".back-to-top-div").each(function (index) {
+let triggerElement = $(this);
+let targetElement = $(this);
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: triggerElement,
+    // trigger element - viewport
+    start: "top bottom",
+    end: "top 90%",
+    scrub: 1
+  }
+}); 
+tl.from(targetElement, {
+  opacity: 0,
+  delay: 7500,
+  duration: 400
+  });
+});
+</script>
+<!-- End Back to top -->
+
+
 
 <!-- Start Split text  -->
 <script>
