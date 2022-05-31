@@ -80,29 +80,6 @@ tl.from(targetElement, {
 <!-- End Section Label -->
 
 
-<!-- Start Circle button -->
-<script>
-$(".circle-button").each(function (index) {
-  let triggerElement = $(this);
-  let targetElement = $(this);
-  
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: triggerElement,
-      // trigger element - viewport
-      start: "top bottom",
-      end: "top 90%",
-      scrub: 1
-    }
-  }); 
-  tl.from(targetElement, {
-    opacity: 0,
-    delay: 20000,
-    duration: 4000
-    });
-  });
-  </script>
-  <!-- End Circle button -->
 
 
 
