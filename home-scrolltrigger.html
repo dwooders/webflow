@@ -1,1 +1,309 @@
 
+
+<!-- Start Split text  -->
+<script>
+// split-text
+let windowWidth = window.outerWidth;
+
+$(".split-text").each(function (index) {
+let myText = $(this);
+let mySplitText;
+function createSplits() {
+  mySplitText = new SplitText(myText, {
+    type: "chars,words,lines",
+    charsClass: "split-chars",
+    wordsClass: "split-words",
+    linesClass: "split-lines"
+  });
+}
+createSplits();
+$(window).resize(function () {
+  if (window.outerWidth !== windowWidth) {
+    mySplitText.revert();
+    location.reload();
+  }
+  windowWidth = window.outerWidth;
+  });
+});
+
+$(".about-header").each(function (index) {
+  let myTextAbout = $(this);
+  let mySplitTextAbout;
+  function createSplitsAbout() {
+    mySplitTextAbout = new SplitText(myTextAbout, {
+      type: "chars,words,lines",
+      charsClass: "split-chars",
+      wordsClass: "split-words",
+      linesClass: "split-lines"
+    });
+  }
+  createSplitsAbout();
+  $(window).resize(function () {
+      if (window.outerWidth !== windowWidth) {
+        mySplitTextAbout.revert();
+            location.reload();
+    }
+    windowWidth = window.outerWidth;
+  });
+});
+
+$(".about-header-stroke").each(function (index) {
+  let myTextAboutStroke = $(this);
+  let mySplitTextAboutStroke;
+  function createSplitsAboutStroke() {
+    mySplitTextAboutStroke = new SplitText(myTextAboutStroke, {
+      type: "chars,words,lines",
+      charsClass: "split-chars",
+      wordsClass: "split-words",
+      linesClass: "split-lines"
+    });
+  }
+  createSplitsAboutStroke();
+  $(window).resize(function () {
+      if (window.outerWidth !== windowWidth) {
+        mySplitTextAboutStroke.revert();
+            location.reload();
+    }
+    windowWidth = window.outerWidth;
+  });
+});
+
+$(".split-client").each(function (index) {
+let myClient = $(this);
+let mySplitClient;
+function createSplitsClient() {
+  mySplitClient = new SplitText(myClient, {
+    type: "chars,words,lines",
+    charsClass: "split-chars",
+    wordsClass: "split-words",
+    linesClass: "split-lines"
+  });
+}
+createSplitsClient();
+$(window).resize(function () {
+  if (window.outerWidth !== windowWidth) {
+    mySplitClient.revert();
+    location.reload();
+  }
+  windowWidth = window.outerWidth;
+  });
+});
+
+$(".contact-header").each(function (index) {
+  let myTextContact = $(this);
+  let mySplitTextContact;
+  function createSplitsContact() {
+    mySplitTextContact = new SplitText(myTextContact, {
+      type: "chars,words,lines",
+      charsClass: "split-chars",
+      wordsClass: "split-words",
+      linesClass: "split-lines"
+    });
+  }
+  createSplitsContact();
+  $(window).resize(function () {
+      if (window.outerWidth !== windowWidth) {
+        mySplitTextContact.revert();
+            location.reload();
+    }
+    windowWidth = window.outerWidth;
+  });
+});
+
+gsap.registerPlugin(ScrollTrigger);
+
+function createTextAnimations() {
+// Line Animation
+$(".line-animation").each(function (index) {
+  let triggerElement = $(this);
+  let myText = $(this).find(".split-text");
+  let targetElement = $(this).find(".split-lines");
+//gets current delay
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "bottom top",
+      toggleActions: "restart none none none"
+    }
+  });
+  tl.from(targetElement, {
+    delay: 1.8,
+    duration: 0.75,
+    y: "150%",
+    rotationX: -90,
+    opacity: 0,
+    ease: "power1.inOut",
+    stagger: {
+      amount: 0.4,
+      from: "0"
+    }
+  });
+});
+
+// Word Animation
+$(".word-animation").each(function (index) {
+  let triggerElement = $(this);
+  let myText = $(this).find(".split-text");
+  let targetElement = $(this).find(".split-words");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "bottom top",
+      toggleActions: "restart none none none"
+    }
+  });
+  tl.from(targetElement, {
+    duration: 0.3,
+    y: "80%",
+    rotationX: -90,
+    opacity: 0,
+    ease: "power1.inOut",
+    stagger: {
+      amount: 0.9,
+      from: "0"
+    }
+  });
+});
+
+}
+
+function createAboutHeaderAnimation() {
+  // Line Animation
+  $(".about-line-animation").each(function (index) {
+    let triggerElement = $(this);
+    let myTextAbout = $(this).find(".about-header");
+    let targetElement = $(this).find(".split-lines");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        // trigger element - viewport
+        start: "top bottom",
+        end: "bottom top",
+        toggleActions: "restart none none none"
+      }
+    });
+    tl.from(targetElement, {
+            delay: .6,
+            duration: 0.55,
+      y: "150%",
+      rotationX: -90,
+      opacity: 0,
+      ease: "power1.inOut",
+            stagger: {
+        amount: 0.4,
+        from: "0"
+      }
+    });
+  });
+}
+
+function createAboutHeaderStrokeAnimation() {
+  // Line Animation
+  $(".about-line-stroke-animation").each(function (index) {
+    let triggerElement = $(this);
+    let myTextAboutStroke = $(this).find(".about-header-stroke");
+    let targetElement = $(this).find(".split-lines");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        // trigger element - viewport
+        start: "top bottom",
+        end: "bottom top",
+        toggleActions: "restart none none none"
+      }
+    });
+    tl.from(targetElement, {
+      delay: .1,
+      duration: 0.55,
+      y: "150%",
+      rotationX: -90,
+      opacity: 0,
+      ease: "power1.inOut",
+            stagger: {
+        amount: 0.4,
+        from: "0"
+      }
+    });
+  });
+}
+
+function createClientNameAnimation() {
+// Letter Animation
+$(".letter-animation").each(function (index) {
+  let triggerElement = $(this);
+  let myClient = $(this).find(".split-client");
+  let targetElement = $(this).find(".split-chars");
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "bottom top",
+      toggleActions: "restart none none none"
+    }
+  });
+  tl.from(targetElement, {
+    delay: .25,
+    duration: 0.5,
+    y: "50%",
+    opacity: 0,
+    rotationX: -90,
+    ease: "power1.inOut",
+    stagger: {
+      amount: 0.3,
+      from: "0"
+    }
+  });
+});
+}
+
+function createContactHeaderAnimation() {
+  // Line Animation
+  $(".contact-line-animation").each(function (index) {
+    let triggerElement = $(this);
+    let myTextAbout = $(this).find(".contact-header");
+    let targetElement = $(this).find(".split-lines");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: triggerElement,
+        // trigger element - viewport
+        start: "top bottom",
+        end: "bottom top",
+        toggleActions: "restart none none none"
+      }
+    });
+    tl.from(targetElement, {
+            delay: .2,
+            duration: 0.75,
+      y: "150%",
+      rotationX: -90,
+      opacity: 0,
+      ease: "power1.inOut",
+            stagger: {
+        amount: 0.4,
+        from: "0"
+      }
+    });
+  });
+}
+
+createTextAnimations();
+createAboutHeaderAnimation();
+createAboutHeaderStrokeAnimation();
+createClientNameAnimation();
+createContactHeaderAnimation();
+
+</script>
+<!-- End Split text  -->
+<!-- End scrolltrigger animations -->
+
