@@ -1,6 +1,7 @@
 
 <!-- Start scrolltrigger animations -->
 
+<!-- Start Hero Section -->
 <!-- Start Client Line animation -->
 <script>
   // Animate From
@@ -24,9 +25,11 @@
     });
   </script>
   <!-- End Client Line animation -->
+<!-- End Hero Section -->
 
 
-<!-- Start About Scroller Arrow animation -->
+<!-- Start About Section -->
+<!-- Start Scroller Arrow animation -->
 <script>
 $(".scroll-link").each(function (index) {
 let triggerElement = $(this);
@@ -51,6 +54,34 @@ tl.from(targetElement, {
 });
 </script>
 <!-- End About Scroller Arrow animation -->
+
+<!-- Start DW pic -->
+<script>
+  $(".dw-link").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+  
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  });
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 165,
+    duration: 2,
+    y : 30,
+    ease: "power1.inOut"
+    });
+  });
+  </script>
+<!-- End DW pic -->
+
+
 
 
 <!-- Start Section Label -->
