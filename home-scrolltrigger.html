@@ -81,6 +81,32 @@ tl.from(targetElement, {
   </script>
 <!-- End DW pic -->
 
+<!-- Start shadow-div -->
+<script>
+  $(".shadow-div").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+  
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  });
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 245,
+    duration: 80,
+    y : 30,
+    ease: "power1.inOut"
+    });
+  });
+  </script>
+<!-- End shadow-div -->
+
 
 
 
