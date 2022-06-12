@@ -25,6 +25,36 @@
     });
   </script>
   <!-- End Client Line animation -->
+
+<!-- Start Hero Paragraph -->
+<script>
+  $(".hero-paragraph-div").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+  
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  });
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 280,
+    duration: 2,
+    y : 30,
+    ease: "power1.inOut"
+    });
+  });
+  </script>
+  <!-- End Hero Paragraph -->
+
+
+
+
 <!-- End Hero Section -->
 
 
@@ -520,5 +550,3 @@ createContactHeaderAnimation();
 </script>
 <!-- End Split text  -->
 <!-- End scrolltrigger animations -->
-
- 
