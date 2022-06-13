@@ -236,8 +236,10 @@ tl.from(targetElement, {
 <!-- Start Back to Top arrow -->
 <script>
   $(".back-to-top-arrow").each(function (index) {
-  let triggerElement = $(this);
+  let triggerElement = $(".contact-form");
   let targetElement = $(this);
+
+
   
   let tl = gsap.timeline({
     scrollTrigger: {
