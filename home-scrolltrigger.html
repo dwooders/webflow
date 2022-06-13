@@ -210,6 +210,7 @@ tl.from(targetElement, {
 <!-- End Featured Video -->
 
 <!-- Start Contact -->
+<!-- Start Submit button -->
 <script>
 $(".submit-button-contact").each(function (index) {
 let triggerElement = $(this);
@@ -231,7 +232,31 @@ tl.from(targetElement, {
   });
 });
 </script>
-<!-- End Contact -->
+<!-- End Submit button -->
+
+<!-- Start Form -->
+<script>
+  $(".contact-form").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+  
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  }); 
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 20000,
+    duration: 4000
+    });
+  });
+  </script>
+  <!-- End Form -->
 
 <!-- Start Back to Top arrow -->
 <script>
