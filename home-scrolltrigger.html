@@ -233,30 +233,29 @@ tl.from(targetElement, {
 </script>
 <!-- End Contact -->
 
-
-<!-- Start Back to top -->
+<!-- Start Back to Top arrow -->
 <script>
-$(".back-to-top-arrow").each(function (index) {
-let triggerElement = $(this);
-let targetElement = $(this);
-
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: triggerElement,
-    // trigger element - viewport
-    start: "top bottom",
-    end: "top 90%",
-    scrub: 1
-  }
-}); 
-tl.from(targetElement, {
-  opacity: 0,
-  delay: 250,
-  duration: 400
+  $(".back-to-top-arrow").each(function (index) {
+  let triggerElement = $(this);
+  let targetElement = $(this);
+  
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: triggerElement,
+      // trigger element - viewport
+      start: "top bottom",
+      end: "top 90%",
+      scrub: 1
+    }
+  }); 
+  tl.from(targetElement, {
+    opacity: 0,
+    delay: 10000,
+    duration: 400
+    });
   });
-});
-</script>
-<!-- End Back to top -->
+  </script>
+<!-- End Back to Top arrow -->
 
 <!-- Start Split text  -->
 <script>
